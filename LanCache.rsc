@@ -29,8 +29,6 @@ add dont-require-permissions=yes name=DNS_CHECK policy=\
     \n  :log error \"SERVER DOWN! (ping)\"\r\
     \n   / ip firewall nat set [find where comment=DNSRedirect && disabled=no]\
     \_disabled=yes;\r\
-    \n  #/ip dns set servers=\"\"\r\
-    \n  #/ip dhcp-client set use-peer-dns=yes numbers=0\r\
     \n}"
 /ip firewall nat add chain=dstnat src-address-list=LanCache-allow protocol=udp dst-port=53 to-addresses=10.0.41.1 to-ports=53 place-before=0\
 	comment=DNSRedirect action=dst-nat
