@@ -13,8 +13,6 @@ add dont-require-permissions=yes name=DNS_CHECK policy=\
     local HOST \"google.com\"\r\
     \n:local HOSTIP \"10.0.41.1\"\r\
     \n\r\
-    \n:log info \"SERVER Checking script started... (\$HOSTIP)\"\r\
-    \n\r\
     \n:if ([/ping \$HOSTIP interval=1 count=1] = 1) do={\r\
     \n  :do {\r\
     \n    :resolve \$HOST server \$HOSTIP;\r\
