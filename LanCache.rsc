@@ -24,7 +24,6 @@ add dont-require-permissions=yes name=DNS_CHECK policy=\
     \n    :log error \"LAN Cache Service is DOWN!\"\r\
     \n   / ip firewall nat set [find where comment=DNSRedirect && disabled=no]\
     \_disabled=yes;\r\
-    \n   #/ppp active remove [find where !radius ];\r\
     \n  }\r\
     \n} else={\r\
     \n  :log error \"SERVER DOWN! (ping)\"\r\
