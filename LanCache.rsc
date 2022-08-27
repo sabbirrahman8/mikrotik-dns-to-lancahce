@@ -6,7 +6,7 @@
 /system scheduler
 add disabled=no interval=1m name=LanCache_Check on-event=DNS_CHECK policy=\
     ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon \
-    start-date=nov/30/2021 start-time=22:27:14
+    interval=00:00:30
 /system script
 add dont-require-permissions=yes name=DNS_CHECK policy=\
     ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source=":\
